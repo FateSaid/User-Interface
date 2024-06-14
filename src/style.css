@@ -73,3 +73,35 @@ img {
   background-color: #966767;
   cursor: pointer;
 }
+
+.content {
+  display: flex;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 200px;
+}
+
+img {
+  background-repeat: no-repeat;
+}
+
+.left {
+  position: absolute;
+  top: 500px;
+  left: 20px;
+}
+
+.left,
+.right {
+  border: 1px solid #000;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.right {
+  position: absolute;
+  top: 500px;
+  right: 20px;
+}
