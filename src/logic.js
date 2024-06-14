@@ -1,7 +1,9 @@
-function btnEvent(hidden){
-    hidden.classList.toggle('show');
+function btnEvent(hidden) {
+  hidden.classList.toggle("show");
 }
 
-export{
-    btnEvent
+function bodyEvent(hide) {
+  hide.remove("show");
 }
+
+export { btnEvent, bodyEvent };

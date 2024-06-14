@@ -1,48 +1,75 @@
-html, body{
-    height: 100%;
-    padding: 0;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align:center;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
 }
 
-header, footer{
-    border: 1px solid #000;
-    padding: 20px;
+header,
+footer {
+  border: 1px solid #000;
+  padding: 20px;
+  background-color: rgb(56, 5, 5);
+  color: white;
 }
 
-.menu{
-    
-    display: inline-block;
-    justify-content: center;
-    position: relative;
+img {
+  width: 100%;
+  height: 100%;
 }
 
-.menu-button{
-    border: 1px solid #000;
-    padding: 10px 20px;
-    cursor:pointer;
+.menu {
+  display: inline-block;
+  justify-content: center;
+  position: relative;
 }
 
-.hidden-container{
-    display: none;
+.menu-button {
+  border: 1px solid #000;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.show{
-    position:absolute;
-    left: -109px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border: 1px solid #000;
-    width: 300px;
-    height: 200px;
-    background-color: #fdf7f7;
-    border-radius: 25px;
+.hidden-container {
+  display: none;
 }
 
+.show {
+  position: absolute;
+  left: -130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid #000;
+  width: 300px;
+  height: 200px;
+  background-color: #fdf7f7;
+  border-radius: 25px;
+  color: black;
+  padding: 20px;
+}
+
+.show .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.show div:nth-child(even) {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.show .item:hover {
+  background-color: #966767;
+  cursor: pointer;
+}
