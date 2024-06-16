@@ -3,7 +3,7 @@ import Icon from "./building.jpg";
 import Architect from "./architect.jpg";
 import Architect2 from "./architect2.jpg";
 import { btnEvent, leftEvent, rightEvent } from "./logic";
-
+const contents = document.querySelector(".content");
 function Images(picture) {
   const content = document.querySelector(".content");
   const myPicture = new Image(100, 200);
@@ -43,4 +43,5 @@ function eventHandlers() {
   });
 }
 addPicture();
+setTimeout(rightEvent(contents), "5000");
 eventHandlers();
