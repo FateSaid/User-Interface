@@ -2,7 +2,7 @@ import "./style.css";
 import Icon from "./building.jpg";
 import Architect from "./architect.jpg";
 import Architect2 from "./architect2.jpg";
-import { btnEvent } from "./logic";
+import { btnEvent, leftEvent, rightEvent } from "./logic";
 
 function Images(picture) {
   const content = document.querySelector(".content");
@@ -19,8 +19,11 @@ function addPicture() {
 }
 
 function eventHandlers() {
+  const content = document.querySelector(".content");
   const hiddenMenu = document.querySelector(".hidden-container");
   const menuBtn = document.querySelector(".menu-button");
+  const leftBtn = document.querySelector(".left");
+  const rightBtn = document.querySelector(".right");
   menuBtn.addEventListener("click", (e) => {
     btnEvent(hiddenMenu);
     e.stopPropagation();
@@ -29,6 +32,14 @@ function eventHandlers() {
     if (hiddenMenu.classList.contains("show")) {
       hiddenMenu.classList.remove("show");
     }
+  });
+
+  leftBtn.addEventListener("click", () => {
+    leftEvent(content);
+  });
+
+  rightBtn.addEventListener("click", () => {
+    rightEvent(content);
   });
 }
 addPicture();
