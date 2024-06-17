@@ -2,8 +2,17 @@ import "./style.css";
 import Icon from "./building.jpg";
 import Architect from "./architect.jpg";
 import Architect2 from "./architect2.jpg";
-import { btnEvent, leftEvent, rightEvent } from "./logic";
-const contents = document.querySelector(".content");
+import {
+  btnEvent,
+  firstPic,
+  leftEvent,
+  rightEvent,
+  secondPic,
+  thirdPic,
+  time,
+} from "./logic";
+
+const timeDelay = time(document.querySelector(".content"));
 function Images(picture) {
   const content = document.querySelector(".content");
   const myPicture = new Image(100, 200);
@@ -24,6 +33,9 @@ function eventHandlers() {
   const menuBtn = document.querySelector(".menu-button");
   const leftBtn = document.querySelector(".left");
   const rightBtn = document.querySelector(".right");
+  const circleOne = document.getElementById("circle-one");
+  const circleTwo = document.getElementById("circle-two");
+  const circleThree = document.getElementById("circle-three");
   menuBtn.addEventListener("click", (e) => {
     btnEvent(hiddenMenu);
     e.stopPropagation();
@@ -41,7 +53,22 @@ function eventHandlers() {
   rightBtn.addEventListener("click", () => {
     rightEvent(content);
   });
+
+  circleOne.addEventListener("click", () => {
+    firstPic(content);
+  });
+
+  circleTwo.addEventListener("click", () => {
+    secondPic(content);
+  });
+
+  circleThree.addEventListener("click", () => {
+    thirdPic(content);
+  });
 }
 addPicture();
-setTimeout(rightEvent(contents), "5000");
+
+setInterval(() => {
+  timeDelay();
+}, "5000");
 eventHandlers();

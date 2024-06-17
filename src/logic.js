@@ -20,16 +20,33 @@ function leftEvent(theDiv) {
   }
 }
 
-function timeDelay(theDiv) {
-  setTimeout(() => {
-    if (theDiv.style.right === "300px") {
-      theDiv.style.right = "1000px";
-    } else if (theDiv.style.right === "1000px") {
-      theDiv.style.right = "1600px";
-    } else if (theDiv.style.right === "1600px") {
-      theDiv.style.right = "300px";
-    }
-  }, "5000");
+function firstPic(theDiv) {
+  theDiv.style.right = "300px";
 }
 
-export { btnEvent, leftEvent, rightEvent, timeDelay };
+function secondPic(theDiv) {
+  theDiv.style.right = "1000px";
+}
+
+function thirdPic(theDiv) {
+  theDiv.style.right = "1600px";
+}
+
+function time(theDiv) {
+  let count = 0;
+  return function () {
+    if (count === 0) {
+      firstPic(theDiv);
+    } else if (count === 1) {
+      secondPic(theDiv);
+    } else if (count === 2) {
+      thirdPic(theDiv);
+    }
+    count++;
+    if (count === 3) {
+      count = 0;
+    }
+  };
+}
+
+export { btnEvent, leftEvent, rightEvent, time, firstPic, secondPic, thirdPic };
