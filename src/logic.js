@@ -49,4 +49,6 @@ function time(theDiv) {
   };
 }
 
+function
+
 export { btnEvent, leftEvent, rightEvent, time, firstPic, secondPic, thirdPic };
